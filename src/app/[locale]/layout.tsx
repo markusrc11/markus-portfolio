@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { routing } from "@/i18n/routing";
+import { cvData } from "@/data/cv";
 import "../globals.css";
 import { notFound } from "next/navigation";
 
@@ -17,10 +18,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Marc Ruiz — Senior Software Engineer",
-  description: "Portfolio of a Senior Software Engineer transitioning to Engineering Management.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Index" });
+  const { personalInfo } = cvData;
+  const url = `https://marcruiz.dev/${locale}`;
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    metadataBase: new URL("https://marcruiz.dev"),
+    alternates: {
+      canonical: url,
+      languages: Object.fromEntries(
+        routing.locales.map((loc) => [loc, `https://marcruiz.dev/${loc}`])
+      ),
+    },
+    openGraph: {
+      type: "website",
+      url,
+      title: t("title"),
+      description: t("description"),
+      locale,
+      siteName: personalInfo.name,
+    },
+    twitter: {
+      card: "summary",
+      title: t("title"),
+      description: t("description"),
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
