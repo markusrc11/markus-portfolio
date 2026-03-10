@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "title": "Marc Ruiz - Senior Software Engineer",
+    "description": "Portfolio of a Senior Software Engineer transitioning to Engineering Management."
+  },
+  "Hero": {
+    "title": "Building scalable solutions with a product mindset",
+    "subtitle": "Senior Software Engineer | Python, Java & Kotlin Specialist",
+    "cta": "Download CV"
+  },
+  "Sections": {
+    "summary": "Professional Summary",
+    "skills": "Technical Skills",
+    "experience": "Professional Experience",
+    "education": "Education",
+    "languages": "Languages"
+  },
+  "Common": {
+    "present": "Present",
+    "remote": "Remote"
+  }
+}

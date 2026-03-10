@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "title": "Marc Ruiz - Ingénieur Logiciel Senior",
+    "description": "Portfolio d'un ingénieur logiciel senior en transition vers le management."
+  },
+  "Hero": {
+    "title": "Développer des solutions évolutives avec une vision produit",
+    "subtitle": "Ingénieur Logiciel Senior | Spécialiste Python, Java & Kotlin",
+    "cta": "Télécharger le CV"
+  },
+  "Sections": {
+    "summary": "Résumé Professionnel",
+    "skills": "Compétences Techniques",
+    "experience": "Expérience Professionnelle",
+    "education": "Éducation",
+    "languages": "Langues"
+  },
+  "Common": {
+    "present": "Présent",
+    "remote": "À distance"
+  }
+}
