@@ -57,7 +57,8 @@ export const cvData = {
   ],
   education: [
     { degree: "Bachelor's Degree in Computer Engineering", institution: "Universitat de Girona", grade: "8.75/10", year: "2017 – 2021" },
-    { degree: "HNC in Multiplatform App Development", institution: "IES Rafael Campalans", grade: "9.25/10", year: "2015 – 2017" }
+    { degree: "HNC in Multiplatform App Development", institution: "IES Rafael Campalans", grade: "9.25/10", year: "2015 – 2017" },
+    { degree: "VET in Microcomputer Systems and Networks", institution: "IES Rafael Campalans", grade: "9.75/10", year: "2013 – 2015" }
   ],
   languages: [
     { language: "Spanish & Catalan", level: "Native" },
