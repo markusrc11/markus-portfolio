@@ -15,6 +15,13 @@
     "education": "Education",
     "languages": "Languages"
   },
+  "Skills": {
+    "management": "Management",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "infrastructure": "Infrastructure",
+    "databases": "Databases"
+  },
   "Common": {
     "present": "Present",
     "remote": "Remote"
