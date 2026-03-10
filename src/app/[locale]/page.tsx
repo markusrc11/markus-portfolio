@@ -1,13 +1,24 @@
 import { useTranslations } from "next-intl";
+import { Navbar } from "@/components/sections/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { Summary } from "@/components/sections/Summary";
+import { Experience } from "@/components/sections/Experience";
+import { Education } from "@/components/sections/Education";
 
 export default function HomePage() {
-  const t = useTranslations("Index");
+  const _t = useTranslations("Index");
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950">
-      <h1 className="text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
-        {t("title")}
-      </h1>
-    </main>
+    <>
+      <Navbar />
+      <main className="bg-[var(--background)]">
+        <Hero />
+        <div className="divide-y divide-[var(--border)]">
+          <Summary />
+          <Experience />
+          <Education />
+        </div>
+      </main>
+    </>
   );
 }
