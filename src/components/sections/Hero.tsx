@@ -14,8 +14,8 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
+  hidden: { opacity: 0, y: 20, z: 0 },
+  visible: { opacity: 1, y: 0, z: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
 export function Hero() {

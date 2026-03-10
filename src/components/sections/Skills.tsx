@@ -31,8 +31,8 @@ export function Skills() {
           {categoryOrder.map((category, i) => (
             <motion.div
               key={category}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 16, z: 0 }}
+              whileInView={{ opacity: 1, y: 0, z: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07, ease: "easeOut" as const }}
               className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"

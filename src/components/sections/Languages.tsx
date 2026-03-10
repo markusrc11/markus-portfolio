@@ -25,8 +25,8 @@ export function Languages() {
           {cvData.languages.map((lang, i) => (
             <motion.li
               key={lang.language}
-              initial={{ opacity: 0, x: -12 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -12, z: 0 }}
+              whileInView={{ opacity: 1, x: 0, z: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: i * 0.08, ease: "easeOut" as const }}
               className="flex items-center justify-between rounded-lg border border-[var(--border)] bg-[var(--surface)] px-5 py-3"
