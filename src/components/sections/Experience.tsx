@@ -30,7 +30,7 @@ export function Experience() {
 
                 {/* Right: role + highlights */}
                 <div className="flex flex-col gap-2">
-                  <p className="text-sm font-medium text-[var(--text-muted)]">{job.role}</p>
+                  <p className="text-sm font-bold text-[var(--foreground)]">{job.role}</p>
                   <ul className="flex flex-col gap-1" aria-label={`Highlights at ${job.company}`}>
                     {job.highlights.map((h) => (
                       <li key={h} className="flex gap-2 text-sm text-[var(--text-muted)]">
