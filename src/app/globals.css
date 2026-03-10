@@ -2,6 +2,7 @@
 
 /* ── Design tokens ─────────────────────────────────────── */
 :root {
+  color-scheme: light;
   --background: #fafafa;   /* zinc-50 */
   --foreground: #09090b;   /* zinc-950 */
   --surface: #ffffff;
@@ -13,6 +14,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --background: #09090b;   /* zinc-950 */
   --foreground: #fafafa;   /* zinc-50 */
   --surface: #18181b;      /* zinc-900 */
@@ -41,4 +43,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Force consistent antialiasing on all elements — prevents text color
+   shift during Framer Motion opacity animations in dark mode */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset browser default link colors (prevents visited yellow in dark mode) */
+a {
+  color: inherit;
+  text-decoration: none;
 }
