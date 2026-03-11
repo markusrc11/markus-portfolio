@@ -3,6 +3,7 @@
 export const cvData = {
   personalInfo: {
     name: "Marc Ruiz",
+    nickname: "@markusrc11",
     role: "Senior Software Engineer | Product & Project Lead",
     specialization: "Python, Java & Kotlin Specialist",
     location: "Girona, Spain",
