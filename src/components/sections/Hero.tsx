@@ -23,7 +23,7 @@ export function Hero() {
 
   return (
     <section
-      className="flex min-h-[90vh] flex-col items-center justify-center px-6 py-24 text-center"
+      className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-12 text-center"
       aria-label="Hero"
     >
       <motion.div
