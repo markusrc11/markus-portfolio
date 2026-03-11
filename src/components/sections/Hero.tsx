@@ -1,12 +1,18 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { Github, Linkedin, MapPin, Download } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cvData } from "@/data/cv";
 
 const { personalInfo } = cvData;
+
+const CV_BY_LOCALE: Record<string, string> = {
+  en: "/cv_en_marc_ruiz.pdf",
+  es: "/cv_es_marc_ruiz.pdf",
+  fr: "/cv_fr_marc_ruiz.pdf",
+};
 
 const containerVariants = {
   hidden: {},
@@ -20,6 +26,8 @@ const itemVariants = {
 
 export function Hero() {
   const t = useTranslations("Hero");
+  const locale = useLocale();
+  const cvUrl = CV_BY_LOCALE[locale] ?? CV_BY_LOCALE.en;
 
   return (
     <section
@@ -72,7 +80,7 @@ export function Hero() {
           <Button
             variant="primary"
             aria-label={t("cta")}
-            onClick={() => window.open("/cv.pdf", "_blank")}
+            onClick={() => window.open(cvUrl, "_blank")}
           >
             <Download size={15} aria-hidden="true" />
             {t("cta")}
