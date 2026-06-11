@@ -9,9 +9,9 @@ import { cvData } from "@/data/cv";
 type SkillCategory = keyof typeof cvData.skills;
 
 const categoryOrder: SkillCategory[] = [
-  "management",
-  "backend",
   "ai",
+  "backend",
+  "management",
   "frontend",
   "infrastructure",
   "databases",

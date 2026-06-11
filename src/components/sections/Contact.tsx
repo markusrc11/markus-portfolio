@@ -24,7 +24,8 @@ export function Contact() {
           <a
             href={`mailto:${contact.email}`}
             aria-label={t("email")}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[var(--accent-fg)] transition-all duration-150 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 outline-none"
+            style={{ backgroundColor: "var(--accent)", color: "var(--accent-fg)" }}
+            className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-150 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 outline-none"
           >
             <Mail size={15} aria-hidden="true" />
             {t("email")}

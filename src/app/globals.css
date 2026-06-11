@@ -58,8 +58,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Reset browser default link colors (prevents visited yellow in dark mode) */
-a {
-  color: inherit;
-  text-decoration: none;
+/* Reset browser default link colors (prevents visited yellow in dark mode).
+   Kept in @layer base so Tailwind text-color utilities can still override it. */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }

@@ -23,13 +23,13 @@ export const cvData = {
     management: ["Product Lifecycle Management", "Roadmap Planning", "Technical Leadership", "KPI Definition"],
     backend: ["Python", "Java", "Kotlin", "OpenERP/Odoo", "DDD", "Clean Architecture", "REST APIs"],
     ai: ["OpenAI LLM integration", "Multilingual generation", "AI image generation", "Optimization algorithms"],
-    frontend: ["React.js", "Next.js", "TailwindCSS", "Alpine.js", "TypeScript"],
+    frontend: ["React.js", "TailwindCSS", "Alpine.js", "TypeScript"],
     infrastructure: ["AWS (EC2, S3)", "Docker", "Jenkins", "GitHub Actions", "Linux Admin"],
-    databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+    databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase"]
   },
   experience: [
     {
-      company: "SPOKI",
+      company: "Spoki",
       period: "Feb 2026 – Present",
       tech: ["Python", "OpenAI", "FastAPI", "Django"],
       role: {
@@ -56,8 +56,8 @@ export const cvData = {
       }
     },
     {
-      company: "STUDENTAN.COM (AI)",
-      period: "April 2025 – Present",
+      company: "Studentan",
+      period: "Apr 2025 – Present",
       tech: ["PHP", "Alpine.js", "TailwindCSS"],
       role: {
         en: "Full Stack Developer (Freelance)",
@@ -80,7 +80,7 @@ export const cvData = {
       }
     },
     {
-      company: "GISCE-TI SL",
+      company: "Gisce-TI",
       period: "Dec 2021 – Feb 2026",
       tech: ["Kotlin", "Java", "Python", "MongoDB"],
       role: {
@@ -107,7 +107,7 @@ export const cvData = {
       }
     },
     {
-      company: "NEWRONIA SL",
+      company: "Newronia",
       period: "Nov 2016 – Dec 2019",
       tech: ["Java", "Python", "AWS"],
       role: {
