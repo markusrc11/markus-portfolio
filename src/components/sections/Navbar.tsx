@@ -10,6 +10,7 @@ export function Navbar() {
     { id: "skills", label: t("skills") },
     { id: "experience", label: t("experience") },
     { id: "education", label: t("education") },
+    { id: "contact", label: t("contact") },
   ];
 
   return (

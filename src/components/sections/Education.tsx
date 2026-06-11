@@ -1,9 +1,12 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { cvData } from "@/data/cv";
 
+type SupportedLocale = "en" | "es" | "fr";
+
 export function Education() {
   const t = useTranslations("Sections");
+  const locale = useLocale() as SupportedLocale;
 
   return (
     <section id="education" aria-labelledby="education-heading" className="scroll-mt-20 py-16">
@@ -16,9 +19,9 @@ export function Education() {
           {/* Education */}
           <ol className="flex flex-col gap-6">
             {cvData.education.map((edu) => (
-              <li key={edu.degree} className="flex flex-col gap-0.5">
+              <li key={edu.degree.en} className="flex flex-col gap-0.5">
                 <span className="text-sm font-semibold text-[var(--foreground)]">
-                  {edu.degree}
+                  {edu.degree[locale] ?? edu.degree.en}
                 </span>
                 <span className="text-sm text-[var(--text-muted)]">{edu.institution}</span>
                 <span className="text-xs text-[var(--text-muted)]">
@@ -36,11 +39,15 @@ export function Education() {
             <ul className="flex flex-col gap-2">
               {cvData.languages.map((lang) => (
                 <li
-                  key={lang.language}
+                  key={lang.language.en}
                   className="flex items-center justify-between border-b border-[var(--border)] pb-2 text-sm"
                 >
-                  <span className="text-[var(--foreground)]">{lang.language}</span>
-                  <span className="text-[var(--text-muted)]">{lang.level}</span>
+                  <span className="text-[var(--foreground)]">
+                    {lang.language[locale] ?? lang.language.en}
+                  </span>
+                  <span className="text-[var(--text-muted)]">
+                    {lang.level[locale] ?? lang.level.en}
+                  </span>
                 </li>
               ))}
             </ul>

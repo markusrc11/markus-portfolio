@@ -1,24 +1,31 @@
 {
   "Index": {
-    "title": "Marc Ruiz - Senior Software Engineer",
-    "description": "Portfolio of a Senior Software Engineer transitioning to Engineering Management."
+    "title": "Marc Ruiz - Backend & AI Software Engineer",
+    "description": "Portfolio of a backend & AI software engineer building production systems with Python, cloud infrastructure and LLMs."
   },
   "Hero": {
-    "title": "Building scalable solutions with a product mindset",
-    "subtitle": "Senior Software Engineer | Python, Java & Kotlin Specialist",
+    "title": "Building and shipping production systems end-to-end — Python services, cloud infrastructure and LLM-powered features.",
+    "subtitle": "Backend & AI Software Engineer",
     "cta": "Download CV"
   },
   "Nav": {
     "skills": "Skills",
     "experience": "Experience",
-    "education": "Education"
+    "education": "Education",
+    "contact": "Contact"
   },
   "Sections": {
     "summary": "Professional Summary",
     "skills": "Technical Skills",
     "experience": "Professional Experience",
     "education": "Education",
-    "languages": "Languages"
+    "languages": "Languages",
+    "projects": "Selected Projects",
+    "contact": "Get in touch"
+  },
+  "Contact": {
+    "body": "I'm open to senior backend and AI engineering roles, remote or relocation. The fastest way to reach me is email.",
+    "email": "Email me"
   },
   "Skills": {
     "management": "Management",
