@@ -5,7 +5,8 @@ import { Summary } from "@/components/sections/Summary";
 import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
 import { Skills } from "@/components/sections/Skills";
-import { Languages } from "@/components/sections/Languages";
+import { Projects } from "@/components/sections/Projects";
+import { Contact } from "@/components/sections/Contact";
 
 export default function HomePage() {
   const _t = useTranslations("Index");
@@ -19,8 +20,10 @@ export default function HomePage() {
           <Summary />
           <Skills />
           <Experience />
+          {/* Projects renders nothing until cvData.projects has entries (TODO) */}
+          <Projects />
           <Education />
-          <Languages />
+          <Contact />
         </div>
       </main>
     </>

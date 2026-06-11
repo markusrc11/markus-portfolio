@@ -46,6 +46,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Smooth scroll for in-page anchor navigation (topbar menu) */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Force consistent antialiasing on all elements — prevents text color
    shift during Framer Motion opacity animations in dark mode */
 * {
@@ -53,8 +58,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Reset browser default link colors (prevents visited yellow in dark mode) */
-a {
-  color: inherit;
-  text-decoration: none;
+/* Reset browser default link colors (prevents visited yellow in dark mode).
+   Kept in @layer base so Tailwind text-color utilities can still override it. */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }

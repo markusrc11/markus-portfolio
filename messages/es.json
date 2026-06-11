@@ -1,23 +1,36 @@
 {
   "Index": {
-    "title": "Marc Ruiz - Ingeniero de Software Senior",
-    "description": "Portfolio de un Ingeniero de Software Senior en transición a Engineering Management."
+    "title": "Marc Ruiz - Ingeniero de Software Backend e IA",
+    "description": "Portfolio de un ingeniero de software backend e IA que construye sistemas en producción con Python, infraestructura cloud y LLMs."
   },
   "Hero": {
-    "title": "Construyendo soluciones escalables con mentalidad de producto",
-    "subtitle": "Ingeniero de Software Senior | Especialista en Python, Java y Kotlin",
+    "title": "Construyo y despliego sistemas en producción de principio a fin — servicios en Python, infraestructura cloud y funcionalidades con LLM.",
+    "subtitle": "Ingeniero de Software Backend e IA",
     "cta": "Descargar CV"
+  },
+  "Nav": {
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "contact": "Contacto"
   },
   "Sections": {
     "summary": "Resumen Profesional",
     "skills": "Habilidades Técnicas",
     "experience": "Experiencia Profesional",
     "education": "Formación",
-    "languages": "Idiomas"
+    "languages": "Idiomas",
+    "projects": "Proyectos Destacados",
+    "contact": "Hablemos"
+  },
+  "Contact": {
+    "body": "Estoy abierto a posiciones senior de backend e ingeniería de IA, en remoto o con relocalización. La forma más rápida de contactarme es por email.",
+    "email": "Escríbeme"
   },
   "Skills": {
     "management": "Gestión",
     "backend": "Backend",
+    "ai": "IA / ML",
     "frontend": "Frontend",
     "infrastructure": "Infraestructura",
     "databases": "Bases de datos"

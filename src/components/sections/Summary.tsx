@@ -10,7 +10,7 @@ export function Summary() {
   const summary = cvData.professionalSummary[locale] ?? cvData.professionalSummary.en;
 
   return (
-    <section aria-labelledby="summary-heading" className="py-16">
+    <section id="summary" aria-labelledby="summary-heading" className="scroll-mt-20 py-16">
       <div className="mx-auto max-w-4xl px-6">
         <SectionTitle>
           <span id="summary-heading">{t("summary")}</span>

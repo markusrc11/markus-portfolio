@@ -1,6 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { cvData } from "@/data/cv";
 
+const LOCALES = ["en", "es", "fr"] as const;
+
 describe("cvData shape", () => {
   it("has required personalInfo fields", () => {
     const { personalInfo } = cvData;
@@ -13,28 +15,33 @@ describe("cvData shape", () => {
   });
 
   it("has professionalSummary for all three locales", () => {
-    expect(cvData.professionalSummary.en).toBeTruthy();
-    expect(cvData.professionalSummary.es).toBeTruthy();
-    expect(cvData.professionalSummary.fr).toBeTruthy();
-  });
-
-  it("has at least one experience entry with required fields", () => {
-    expect(cvData.experience.length).toBeGreaterThan(0);
-    for (const job of cvData.experience) {
-      expect(job.company).toBeTruthy();
-      expect(job.role).toBeTruthy();
-      expect(job.period).toBeTruthy();
-      expect(job.highlights.length).toBeGreaterThan(0);
+    for (const locale of LOCALES) {
+      expect(cvData.professionalSummary[locale]).toBeTruthy();
     }
   });
 
-  it("has at least one education entry with required fields", () => {
+  it("has experience entries localized for all three locales", () => {
+    expect(cvData.experience.length).toBeGreaterThan(0);
+    for (const job of cvData.experience) {
+      expect(job.company).toBeTruthy();
+      expect(job.period).toBeTruthy();
+      expect(job.tech.length).toBeGreaterThan(0);
+      for (const locale of LOCALES) {
+        expect(job.role[locale]).toBeTruthy();
+        expect(job.highlights[locale].length).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("has education entries localized for all three locales", () => {
     expect(cvData.education.length).toBeGreaterThan(0);
     for (const edu of cvData.education) {
-      expect(edu.degree).toBeTruthy();
       expect(edu.institution).toBeTruthy();
       expect(edu.grade).toBeTruthy();
       expect(edu.year).toBeTruthy();
+      for (const locale of LOCALES) {
+        expect(edu.degree[locale]).toBeTruthy();
+      }
     }
   });
 
@@ -42,16 +49,19 @@ describe("cvData shape", () => {
     const { skills } = cvData;
     expect(skills.management.length).toBeGreaterThan(0);
     expect(skills.backend.length).toBeGreaterThan(0);
+    expect(skills.ai.length).toBeGreaterThan(0);
     expect(skills.frontend.length).toBeGreaterThan(0);
     expect(skills.infrastructure.length).toBeGreaterThan(0);
     expect(skills.databases.length).toBeGreaterThan(0);
   });
 
-  it("has at least one language entry", () => {
+  it("has language entries localized for all three locales", () => {
     expect(cvData.languages.length).toBeGreaterThan(0);
     for (const lang of cvData.languages) {
-      expect(lang.language).toBeTruthy();
-      expect(lang.level).toBeTruthy();
+      for (const locale of LOCALES) {
+        expect(lang.language[locale]).toBeTruthy();
+        expect(lang.level[locale]).toBeTruthy();
+      }
     }
   });
 });
