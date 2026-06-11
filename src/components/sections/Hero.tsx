@@ -41,11 +41,15 @@ export function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Location pill */}
-        <motion.div variants={itemVariants}>
+        {/* Location + availability pills */}
+        <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--text-muted)]">
             <MapPin size={12} aria-hidden="true" />
             {personalInfo.location}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--text-muted)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true" />
+            {t("availability")}
           </span>
         </motion.div>
 
