@@ -30,7 +30,13 @@ export const cvData = {
   experience: [
     {
       company: "Spoki",
-      period: "Feb 2026 – Present",
+      start: { year: 2026, month: 2 },
+      end: null as { year: number; month: number } | null,
+      location: {
+        en: "Remote — Girona, Spain",
+        es: "Remoto — Girona, España",
+        fr: "À distance — Gérone, Espagne"
+      },
       tech: ["Python", "OpenAI", "FastAPI", "Django"],
       role: {
         en: "AI Software Engineer",
@@ -57,7 +63,13 @@ export const cvData = {
     },
     {
       company: "Studentan",
-      period: "Apr 2025 – Present",
+      start: { year: 2025, month: 4 },
+      end: null as { year: number; month: number } | null,
+      location: {
+        en: "Remote — Geneva, Switzerland",
+        es: "Remoto — Ginebra, Suiza",
+        fr: "À distance — Genève, Suisse"
+      },
       tech: ["PHP", "Alpine.js", "TailwindCSS"],
       role: {
         en: "Full Stack Developer (Freelance)",
@@ -81,7 +93,13 @@ export const cvData = {
     },
     {
       company: "Gisce-TI",
-      period: "Dec 2021 – Feb 2026",
+      start: { year: 2021, month: 12 },
+      end: { year: 2026, month: 2 } as { year: number; month: number } | null,
+      location: {
+        en: "Girona, Spain",
+        es: "Girona, España",
+        fr: "Gérone, Espagne"
+      },
       tech: ["Kotlin", "Java", "Python", "MongoDB"],
       role: {
         en: "Software Engineer",
@@ -108,7 +126,13 @@ export const cvData = {
     },
     {
       company: "Newronia",
-      period: "Nov 2016 – Dec 2019",
+      start: { year: 2016, month: 11 },
+      end: { year: 2019, month: 12 } as { year: number; month: number } | null,
+      location: {
+        en: "Girona, Spain",
+        es: "Girona, España",
+        fr: "Gérone, Espagne"
+      },
       tech: ["Java", "Python", "AWS"],
       role: {
         en: "Software Developer",

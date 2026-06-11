@@ -24,10 +24,13 @@ describe("cvData shape", () => {
     expect(cvData.experience.length).toBeGreaterThan(0);
     for (const job of cvData.experience) {
       expect(job.company).toBeTruthy();
-      expect(job.period).toBeTruthy();
+      expect(job.start.year).toBeGreaterThan(0);
+      expect(job.start.month).toBeGreaterThanOrEqual(1);
+      expect(job.start.month).toBeLessThanOrEqual(12);
       expect(job.tech.length).toBeGreaterThan(0);
       for (const locale of LOCALES) {
         expect(job.role[locale]).toBeTruthy();
+        expect(job.location[locale]).toBeTruthy();
         expect(job.highlights[locale].length).toBeGreaterThan(0);
       }
     }
