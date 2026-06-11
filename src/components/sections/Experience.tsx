@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { cvData } from "@/data/cv";
+import { formatRange } from "@/lib/dates";
 
 type SupportedLocale = "en" | "es" | "fr";
 
@@ -18,11 +19,12 @@ export function Experience() {
 
         <ol className="flex flex-col gap-10">
           {cvData.experience.map((job) => {
-            const period = job.period.replace("Present", tCommon("present"));
+            const period = formatRange(job.start, job.end, locale, tCommon("present"));
             const role = job.role[locale] ?? job.role.en;
+            const location = job.location[locale] ?? job.location.en;
             const highlights = job.highlights[locale] ?? job.highlights.en;
             return (
-              <li key={`${job.company}-${job.period}`} className="relative grid gap-1 sm:grid-cols-[1fr_2fr]">
+              <li key={`${job.company}-${job.start.year}`} className="relative grid gap-1 sm:grid-cols-[1fr_2fr]">
                 {/* Left: meta */}
                 <div className="flex flex-col gap-1">
                   <time className="text-xs font-medium text-[var(--text-muted)]">
@@ -31,6 +33,7 @@ export function Experience() {
                   <span className="text-sm font-semibold text-[var(--foreground)]">
                     {job.company}
                   </span>
+                  <span className="text-xs text-[var(--text-muted)]">{location}</span>
                 </div>
 
                 {/* Right: role + highlights */}
