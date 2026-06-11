@@ -5,6 +5,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { routing } from "@/i18n/routing";
 import { cvData } from "@/data/cv";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 import { notFound } from "next/navigation";
 
@@ -26,16 +27,16 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Index" });
   const { personalInfo } = cvData;
-  const url = `https://marcruiz.dev/${locale}`;
+  const url = `${SITE_URL}/${locale}`;
 
   return {
     title: t("title"),
     description: t("description"),
-    metadataBase: new URL("https://marcruiz.dev"),
+    metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        routing.locales.map((loc) => [loc, `https://marcruiz.dev/${loc}`])
+        routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}`])
       ),
     },
     openGraph: {
