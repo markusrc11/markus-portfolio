@@ -8,6 +8,11 @@
     "subtitle": "Ingénieur Logiciel Senior | Spécialiste Python, Java & Kotlin",
     "cta": "Télécharger le CV"
   },
+  "Nav": {
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "education": "Formation"
+  },
   "Sections": {
     "summary": "Résumé Professionnel",
     "skills": "Compétences Techniques",
@@ -18,6 +23,7 @@
   "Skills": {
     "management": "Management",
     "backend": "Backend",
+    "ai": "IA / ML",
     "frontend": "Frontend",
     "infrastructure": "Infrastructure",
     "databases": "Bases de données"

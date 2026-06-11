@@ -17,16 +17,16 @@ export function LanguageSwitcher() {
 
   return (
     <nav aria-label="Language switcher">
-      <ul className="flex items-center gap-1">
+      <ul className="flex items-center gap-0.5 rounded-full border border-[var(--border)] bg-[var(--surface-muted)] p-0.5">
         {routing.locales.map((loc) => (
           <li key={loc}>
             <Link
               href={pathname}
               locale={loc}
               className={clsx(
-                "rounded px-2 py-1 text-xs font-semibold uppercase tracking-wider transition-colors",
+                "block rounded-full px-2 py-0.5 text-xs font-semibold uppercase tracking-wider transition-colors",
                 locale === loc
-                  ? "text-[var(--foreground)]"
+                  ? "bg-[var(--background)] text-[var(--foreground)] shadow-sm"
                   : "text-[var(--text-muted)] hover:text-[var(--foreground)]"
               )}
               aria-label={`Switch to ${loc.toUpperCase()}`}

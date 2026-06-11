@@ -7,7 +7,7 @@ export function Experience() {
   const tCommon = useTranslations("Common");
 
   return (
-    <section aria-labelledby="experience-heading" className="py-16">
+    <section id="experience" aria-labelledby="experience-heading" className="scroll-mt-20 py-16">
       <div className="mx-auto max-w-4xl px-6">
         <SectionTitle>
           <span id="experience-heading">{t("experience")}</span>
@@ -39,6 +39,19 @@ export function Experience() {
                       </li>
                     ))}
                   </ul>
+
+                  {job.tech.length > 0 && (
+                    <ul className="mt-2 flex flex-wrap gap-1.5" aria-label={`Main tools at ${job.company}`}>
+                      {job.tech.map((tech) => (
+                        <li
+                          key={tech}
+                          className="rounded-full border border-[var(--border)] bg-[var(--surface-muted)] px-2.5 py-0.5 text-xs font-medium text-[var(--text-muted)]"
+                        >
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </li>
             );

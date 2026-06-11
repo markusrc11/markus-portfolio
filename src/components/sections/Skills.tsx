@@ -11,6 +11,7 @@ type SkillCategory = keyof typeof cvData.skills;
 const categoryOrder: SkillCategory[] = [
   "management",
   "backend",
+  "ai",
   "frontend",
   "infrastructure",
   "databases",
@@ -21,7 +22,7 @@ export function Skills() {
   const tSkills = useTranslations("Skills");
 
   return (
-    <section aria-labelledby="skills-heading" className="py-16">
+    <section id="skills" aria-labelledby="skills-heading" className="scroll-mt-20 py-16">
       <div className="mx-auto max-w-4xl px-6">
         <SectionTitle>
           <span id="skills-heading">{t("skills")}</span>

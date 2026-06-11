@@ -8,6 +8,11 @@
     "subtitle": "Senior Software Engineer | Python, Java & Kotlin Specialist",
     "cta": "Download CV"
   },
+  "Nav": {
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education"
+  },
   "Sections": {
     "summary": "Professional Summary",
     "skills": "Technical Skills",
@@ -18,6 +23,7 @@
   "Skills": {
     "management": "Management",
     "backend": "Backend",
+    "ai": "AI / ML",
     "frontend": "Frontend",
     "infrastructure": "Infrastructure",
     "databases": "Databases"

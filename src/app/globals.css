@@ -46,6 +46,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Smooth scroll for in-page anchor navigation (topbar menu) */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Force consistent antialiasing on all elements — prevents text color
    shift during Framer Motion opacity animations in dark mode */
 * {

@@ -22,15 +22,28 @@ export const cvData = {
   skills: {
     management: ["Product Lifecycle Management", "Roadmap Planning", "Technical Leadership", "KPI Definition"],
     backend: ["Python", "Java", "Kotlin", "OpenERP/Odoo", "DDD", "Clean Architecture", "REST APIs"],
+    ai: ["OpenAI LLM integration", "Multilingual generation", "AI image generation", "Optimization algorithms"],
     frontend: ["React.js", "Next.js", "TailwindCSS", "Alpine.js", "TypeScript"],
     infrastructure: ["AWS (EC2, S3)", "Docker", "Jenkins", "GitHub Actions", "Linux Admin"],
     databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
   },
   experience: [
     {
+      company: "SPOKI",
+      role: "AI Software Engineer",
+      period: "Feb 2026 – Present",
+      tech: ["Python", "OpenAI", "FastAPI", "Django"],
+      highlights: [
+        "Integrated OpenAI LLMs with strict output constraints and multilingual support into the core product.",
+        "Built a cross-repository data auto-fill feature (AI, backend, frontend) to cut onboarding friction.",
+        "Added AI image-generation to the user workflow, from technical definition to production."
+      ]
+    },
+    {
       company: "STUDENTAN.COM (AI)",
       role: "Full Stack Developer (Freelance)",
       period: "April 2025 – Present",
+      tech: ["PHP", "Alpine.js", "TailwindCSS"],
       highlights: [
         "Full ownership of web platform refactoring using PHP and DDD.",
         "Improved UX with Alpine.js and TailwindCSS."
@@ -39,7 +52,8 @@ export const cvData = {
     {
       company: "GISCE-TI SL",
       role: "Software Engineer",
-      period: "Dec 2021 – Present",
+      period: "Dec 2021 – Feb 2026",
+      tech: ["Kotlin", "Java", "Python", "MongoDB"],
       highlights: [
         "Led management and development of native Android app (Kotlin/Java).",
         "Integrated MongoDB and Redis for real-time electricity meter data.",
@@ -50,6 +64,7 @@ export const cvData = {
       company: "NEWRONIA SL",
       role: "Software Developer",
       period: "Nov 2016 – Dec 2019",
+      tech: ["Java", "Python", "AWS"],
       highlights: [
         "Developed Android (Java) app for indoor geolocation.",
         "Deployed AI-driven route calculation engine on AWS for a fleet of 50+ trucks."
@@ -62,8 +77,9 @@ export const cvData = {
     { degree: "VET in Microcomputer Systems and Networks", institution: "IES Rafael Campalans", grade: "9.75/10", year: "2013 – 2015" }
   ],
   languages: [
-    { language: "Spanish & Catalan", level: "Native" },
-    { language: "English", level: "B2.2 (Professional)" },
+    { language: "Catalan", level: "Native" },
+    { language: "Spanish", level: "Native" },
+    { language: "English", level: "C1 (Professional)" },
     { language: "French", level: "B1 (Intermediate)" }
   ]
 };
