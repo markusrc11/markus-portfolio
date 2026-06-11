@@ -6,7 +6,8 @@
   "Hero": {
     "title": "Construyo y despliego sistemas en producción de principio a fin — servicios en Python, infraestructura cloud y funcionalidades con LLM.",
     "subtitle": "Ingeniero de Software Backend e IA",
-    "cta": "Descargar CV"
+    "cta": "Descargar CV",
+    "availability": "Abierto a trabajo remoto o reubicación"
   },
   "Nav": {
     "skills": "Habilidades",
@@ -20,7 +21,7 @@
     "experience": "Experiencia Profesional",
     "education": "Formación",
     "languages": "Idiomas",
-    "projects": "Proyectos Destacados",
+    "projects": "Proyectos Personales",
     "contact": "Hablemos"
   },
   "Contact": {

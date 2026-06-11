@@ -205,10 +205,8 @@ export const cvData = {
       level: { en: "B1 (Intermediate)", es: "B1 (Intermedio)", fr: "B1 (Intermédiaire)" }
     }
   ],
-  // TODO: add selected projects here to enable the Projects section
-  // (it stays hidden while this array is empty). Candidates:
-  //  - Spoki GenAI product (OpenAI LLM + image generation)
-  //  - AWS route-optimization engine (Newronia, fleet of 50+ trucks)
+  // TODO: add side projects here to enable the Projects section
+  // (it stays hidden while this array is empty).
   projects: [] as {
     name: string;
     description: { en: string; es: string; fr: string };

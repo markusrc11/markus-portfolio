@@ -29,7 +29,18 @@ export function Projects() {
               className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"
             >
               <h3 className="text-sm font-semibold text-[var(--foreground)]">
-                {project.name}
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-[var(--text-muted)]"
+                  >
+                    {project.name} ↗
+                  </a>
+                ) : (
+                  project.name
+                )}
               </h3>
               <p className="mt-2 text-sm text-[var(--text-muted)]">
                 {project.description[locale] ?? project.description.en}

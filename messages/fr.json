@@ -6,7 +6,8 @@
   "Hero": {
     "title": "Je conçois et déploie des systèmes en production de bout en bout — services Python, infrastructure cloud et fonctionnalités basées sur les LLM.",
     "subtitle": "Ingénieur Logiciel Backend & IA",
-    "cta": "Télécharger le CV"
+    "cta": "Télécharger le CV",
+    "availability": "Ouvert au télétravail ou à la mobilité géographique"
   },
   "Nav": {
     "skills": "Compétences",
@@ -20,7 +21,7 @@
     "experience": "Expérience Professionnelle",
     "education": "Éducation",
     "languages": "Langues",
-    "projects": "Projets Sélectionnés",
+    "projects": "Projets Personnels",
     "contact": "Contact"
   },
   "Contact": {

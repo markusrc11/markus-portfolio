@@ -6,7 +6,8 @@
   "Hero": {
     "title": "Building and shipping production systems end-to-end — Python services, cloud infrastructure and LLM-powered features.",
     "subtitle": "Backend & AI Software Engineer",
-    "cta": "Download CV"
+    "cta": "Download CV",
+    "availability": "Open to remote or relocation"
   },
   "Nav": {
     "skills": "Skills",
@@ -20,7 +21,7 @@
     "experience": "Professional Experience",
     "education": "Education",
     "languages": "Languages",
-    "projects": "Selected Projects",
+    "projects": "Side Projects",
     "contact": "Get in touch"
   },
   "Contact": {
